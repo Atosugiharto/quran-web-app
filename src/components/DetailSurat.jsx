@@ -47,10 +47,10 @@ function DetailSurat() {
             </div>
             <div className="ml-4 mt-4">
             {/* <InfoIcon className="bg-white h-5 w-5 text-blue-600"/> */}
-              <h3 className="text-2xl text-right leading-6 font-bold text-gray-900">
+              <h3 className="text-xl text-right leading-6 font-bold text-gray-900">
               {namaSurat}
               </h3>
-              <p className="mt-1 text-md font-semibold text-gray-500">
+              <p className="mt-1 text-sm font-semibold text-gray-500">
                 {namaLatin} {`(${arti})`}
               </p>
               <p className="text-right text-sm font-semibold text-gray-500">

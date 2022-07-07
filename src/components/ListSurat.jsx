@@ -60,12 +60,12 @@ function ListSurat() {
                             {/* <p>
                             {surat?.nomor}
                             </p> */}
-                            <p className="font-mono text-sm font-semibold text-gray-800">
+                            <p className="text-sm font-semibold text-gray-800">
                               {`${surat?.nomor}) `}
                               {surat?.nama_latin}
                               {` (${surat?.arti})`}
                             </p>
-                            <p className="text-sm font-mono font-semibold text-gray-700">{`${surat?.jumlah_ayat} ayat`}
+                            <p className="text-sm font-semibold text-gray-700">{`${surat?.jumlah_ayat} ayat`}
                             {` | ${surat?.tempat_turun}`}</p>
                           </div>
                           <div className="text-right text-sm whitespace-nowrap text-gray-500">
