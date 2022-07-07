@@ -10,6 +10,8 @@ function DetailSurat() {
   const [ayat, setAyat] = useState([]);
   const [namaLatin, setNamaLatin] = useState("");
   const [arti, setArti] = useState("");
+  const [jumlahAyat, setJumlahAyat] = useState("");
+  const [tempatTurun, setTempatTurun] = useState("");
   // console.log(useParams())
   // console.log(nomor);
 
@@ -22,6 +24,8 @@ function DetailSurat() {
     setAyat(surat?.ayat);
     setNamaLatin(surat?.nama_latin);
     setArti(surat?.arti);
+    setJumlahAyat(surat?.jumlah_ayat);
+    setTempatTurun(surat?.tempat_turun);
   };
   useEffect(() => {
     getSuratDetail();
@@ -43,11 +47,14 @@ function DetailSurat() {
             </div>
             <div className="ml-4 mt-4">
             {/* <InfoIcon className="bg-white h-5 w-5 text-blue-600"/> */}
-              <h3 className="text-lg text-right leading-6 font-medium text-gray-900">
+              <h3 className="text-2xl text-right leading-6 font-bold text-gray-900">
               {namaSurat}
               </h3>
-              <p className="mt-1 text-sm text-gray-500">
+              <p className="mt-1 text-md font-semibold text-gray-500">
                 {namaLatin} {`(${arti})`}
+              </p>
+              <p className="text-right text-sm font-semibold text-gray-500">
+                {jumlahAyat} {` Ayat | ${tempatTurun}`}
               </p>
             </div>
           </div>
@@ -56,7 +63,7 @@ function DetailSurat() {
           {namaSurat.nama}
           {ayat?.map((ayat) => (
             <li className="px-4 py-4 sm:px-0">
-              <p className="text-lg md:text-xl font-sans font-semibold mb-4 text-right pr-4">
+              <p className="text-xl font-sans font-md mb-4 text-right pr-4">
                 {ayat?.ar}
               </p>
               <p className="text-sm font-normal text-gray-500 text-left pl-4">
